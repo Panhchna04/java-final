@@ -2,16 +2,23 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
+        excercise2.Customer premiumCustomer = new Customer("Premium");
+        excercise2.Customer goldCustomer = new Customer("Gold");
+        excercise2.Customer silverCustomer = new Customer("Silver");
+        excercise2.Customer normalCustomer = new Customer("Normal");
+        excercise2.Sale sale = new Sale();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("Service discount for Premium customer: " + sale.getServiceDiscountRate(premiumCustomer.getType()) * 100 + "%");
+        System.out.println("Product discount for Premium customer: " + sale.getProductDiscountRate(premiumCustomer.getType()) * 100 + "%");
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        System.out.println("Service discount for Gold customer: " + sale.getServiceDiscountRate(goldCustomer.getType()) * 100 + "%");
+        System.out.println("Product discount for Gold customer: " + sale.getProductDiscountRate(goldCustomer.getType()) * 100 + "%");
+
+        System.out.println("Service discount for Silver customer: " + sale.getServiceDiscountRate(silverCustomer.getType()) * 100 + "%");
+        System.out.println("Product discount for Silver customer: " + sale.getProductDiscountRate(silverCustomer.getType()) * 100 + "%");
+
+        System.out.println("Service discount for Normal customer: " + sale.getServiceDiscountRate(normalCustomer.getType()) * 100 + "%");
+        System.out.println("Product discount for Normal customer: " + sale.getProductDiscountRate(normalCustomer.getType()) * 100 + "%");
         }
     }
 }
